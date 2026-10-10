@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Family Wealth Fortress™ V4 | Family Wealth Protection Advisers</title>
+<meta name="description" content="Stress-test your Will, trusts, superannuation, business succession and family protection strategy—and identify the gaps before they become expensive problems.">
+<meta name="theme-color" content="#06111f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 3 60 13 55 46 32 61 9 46 4 13Z' fill='%23d8ad4a'/%3E%3Ctext x='32' y='40' font-family='Arial' font-weight='900' font-size='17' text-anchor='middle' fill='%2306111f'%3EFWP%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#06111f;--bg2:#02070d;--navy:#0d2238;--navy2:#12314e;
+  --gold:#d8ad4a;--gold2:#f2d27f;--cream:#f6f0df;
+  --text:#fff;--text2:#dbe5ee;--muted:#b5c3d1;--muted2:#8d9cab;
+  --green:#3cc68a;--amber:#efa43d;--red:#e5606b;--blue:#5da8e8;
+  --line:rgba(255,255,255,.12);--line2:rgba(255,255,255,.2);
+  --card:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+  --shadow:0 24px 70px rgba(0,0,0,.35);
+  --r-lg:24px;--r-md:16px;--r-sm:12px;
+  --font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);color:var(--text);line-height:1.5;min-height:100vh;
+  background:radial-gradient(circle at 12% 0%,rgba(93,168,232,.14),transparent 28%),
+             radial-gradient(circle at 90% 3%,rgba(216,173,74,.17),transparent 30%),
+             linear-gradient(135deg,var(--bg),var(--bg2) 78%)}
+html{background:var(--bg2)}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h2{font-size:clamp(22px,2.6vw,28px)}
+h3{font-size:18px}
+p{margin:0 0 1em}
+button,input{font:inherit}
+a{color:var(--gold2)}
+:focus-visible{outline:3px solid var(--gold2);outline-offset:3px;border-radius:8px}
+[hidden]{display:none!important}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:var(--gold2);color:var(--bg);padding:10px 14px;border-radius:10px;font-weight:800;text-decoration:none}
+.skip:focus{top:12px}
+
+.wrap{max-width:1200px;margin:0 auto;padding:clamp(14px,2.5vw,24px);padding-bottom:0}
+.site-header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:clamp(14px,2.4vw,22px)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.05em;font-size:clamp(13px,1.6vw,16px);color:#fff;text-decoration:none}
+.logo{flex:none;width:50px;height:50px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(145deg,var(--gold2),var(--gold));color:var(--bg);font-weight:900;font-size:15px;box-shadow:0 10px 28px rgba(216,173,74,.24)}
+.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:.12em;margin-top:3px;font-weight:700}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);color:var(--gold2);font-size:12px;font-weight:800;letter-spacing:.04em}
+
+/* stepper */
+.stepper{display:flex;gap:6px;list-style:none;margin:0;padding:0;font-size:12px;font-weight:700}
+.stepper li{display:flex;align-items:center;gap:7px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted2);background:rgba(255,255,255,.03)}
+.stepper li .n{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);font-size:11px}
+.stepper li.active{color:#fff;border-color:rgba(242,210,127,.55)}
+.stepper li.active .n{background:var(--gold2);color:var(--bg)}
+.stepper li.done{color:var(--muted)}
+.stepper li.done .n{background:rgba(60,198,138,.25);color:#bff0d8}
+
+.card{border:1px solid var(--line);background:var(--card);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:clamp(20px,3vw,30px)}
+.screen{display:none;animation:fade .35s ease}
+.screen.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* buttons */
+.btn{border:0;border-radius:var(--r-sm);padding:13px 18px;min-height:46px;font-size:15px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s,opacity .15s}
+.btn:hover:not(:disabled){transform:translateY(-1px)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.primary{background:linear-gradient(145deg,var(--gold2),var(--gold));color:var(--bg);box-shadow:0 8px 22px rgba(216,173,74,.22)}
+.outline{background:transparent;color:#fff;border:1px solid var(--line2)}
+.outline:hover{background:rgba(255,255,255,.05)}
+.dark{background:var(--navy2);color:#fff;border:1px solid var(--line)}
+.ghost{background:none;border:0;color:var(--muted);padding:8px 0;min-height:0;font-weight:700}
+.ghost:hover{color:#fff}
+.wide{width:100%}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(20px,3vw,36px);align-items:center;position:relative;overflow:hidden;padding:clamp(22px,4vw,44px)}
+.hero:after{content:"";position:absolute;right:-170px;bottom:-210px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(216,173,74,.2),transparent 68%);pointer-events:none}
+.hero h1{font-size:clamp(38px,6vw,72px);line-height:1;margin:14px 0 18px;letter-spacing:-.02em}
+.gold{color:var(--gold2)}
+.lead{font-size:clamp(17px,2vw,21px);color:var(--text2);max-width:640px}
+.hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0}
+.hero-mini{padding:14px;border:1px solid var(--line);border-radius:var(--r-md);background:rgba(255,255,255,.035);font-size:13px;color:#d5dfe8;line-height:1.45}
+.hero-mini b{display:block;color:#fff;margin-bottom:4px;font-size:14px}
+.start-card{padding:22px;border-radius:20px;background:var(--cream);color:#102238;position:relative;z-index:2}
+.start-card h2{font-size:clamp(20px,2.2vw,24px);margin:0 0 6px}
+.start-card p{color:#4c5b6b;margin:0 0 16px}
+.visual{display:flex;flex-direction:column;align-items:center;gap:22px;position:relative;z-index:1}
+.shield-wrap{position:relative;width:min(100%,360px);aspect-ratio:1/1.02;display:grid;place-items:center}
+.shield-wrap svg.shield{width:76%;height:auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.4))}
+.threat{position:absolute;font-size:clamp(28px,3.4vw,38px);filter:drop-shadow(0 8px 12px rgba(0,0,0,.45));animation:float 3.2s ease-in-out infinite;line-height:1}
+.t1{left:2%;top:14%}.t2{right:0;top:28%;animation-delay:.5s}.t3{left:6%;bottom:12%;animation-delay:1s}.t4{right:6%;bottom:8%;animation-delay:1.4s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.countdown{width:min(100%,360px);text-align:center;padding:14px;border-radius:var(--r-md);background:rgba(229,96,107,.13);border:1px solid rgba(229,96,107,.45)}
+.countdown b{display:block;font-size:26px;color:#ffd7da;line-height:1.2}
+.countdown span{font-size:11px;color:#f0c1c5;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+
+/* setup */
+.screen-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.grid-2{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:start}
+.sub{color:#c8d4df}
+.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.choice{position:relative;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#fff;border-radius:var(--r-md);padding:16px;text-align:left;cursor:pointer;transition:border-color .15s,background .15s,transform .15s;display:flex;gap:12px;align-items:flex-start;width:100%}
+.choice:hover{border-color:rgba(242,210,127,.6);background:rgba(242,210,127,.06)}
+.choice[aria-checked="true"]{border-color:var(--gold2);background:rgba(242,210,127,.11);box-shadow:inset 0 0 0 1px var(--gold2)}
+.choice[aria-checked="true"]:after{content:"✓";position:absolute;top:10px;right:12px;width:22px;height:22px;border-radius:50%;background:var(--gold2);color:var(--bg);font-size:13px;font-weight:900;display:grid;place-items:center}
+.choice .ico{font-size:26px;line-height:1;flex:none}
+.choice b{display:block;font-size:16px;margin-bottom:3px;padding-right:22px}
+.choice span{color:#c6d2dd;font-size:13px;line-height:1.45}
+.profile-choice{flex-direction:column;gap:6px}
+.field{display:grid;gap:6px;margin-bottom:14px}
+.field label{font-size:13px;font-weight:700}
+.field input{width:100%;padding:12px 14px;border-radius:var(--r-sm);border:1px solid var(--line2);background:rgba(255,255,255,.05);color:#fff;font-size:16px}
+.field input::placeholder{color:#7f8e9d}
+.field input:focus{border-color:var(--gold2);outline:none;box-shadow:0 0 0 3px rgba(242,210,127,.25)}
+.hint{font-size:12px;color:var(--muted2);margin:-4px 0 12px}
+
+/* game */
+.hud{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;margin-bottom:14px}
+.progress-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:6px;font-weight:700}
+.progress,.cat-track{height:9px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden}
+.cat-track{height:8px}
+.bar,.cat-fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--gold2));transition:width .35s}
+.hud-score{padding:8px 14px;border:1px solid var(--line);border-radius:var(--r-sm);background:rgba(255,255,255,.04);text-align:center;min-width:110px}
+.hud-score b{display:block;font-size:20px;line-height:1.2}
+.hud-score span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.question{font-size:clamp(24px,3.4vw,38px);margin:14px 0 8px;outline:none}
+.options{margin-top:20px}
+.option{min-height:92px}
+.kbd{display:inline-grid;place-items:center;min-width:20px;height:20px;border:1px solid var(--line2);border-radius:5px;font-size:11px;color:var(--muted);margin-right:2px}
+.warning{margin-top:18px;padding:16px;border-radius:var(--r-md);background:linear-gradient(145deg,rgba(229,96,107,.2),rgba(229,96,107,.07));border:1px solid rgba(229,96,107,.5);animation:pulse 1.2s ease-in-out 2}
+.warning[hidden]{display:none}
+.warning strong{display:block;font-size:17px;margin-bottom:4px;color:#ffd7da}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(229,96,107,.28)}50%{box-shadow:0 0 0 10px rgba(229,96,107,0)}}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:20px;flex-wrap:wrap}
+.nav .keys{font-size:12px;color:var(--muted2)}
+.side h2{font-size:18px}
+.cat-row{margin:12px 0}
+.cat-head{display:flex;justify-content:space-between;gap:8px;font-size:13px;margin-bottom:6px}
+.radar{margin-top:18px;padding:16px;border-radius:var(--r-md);background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.radar .big{font-size:32px;line-height:1.2}
+.chip{display:inline-flex;padding:5px 10px;border-radius:999px;font-size:11px;font-weight:800;background:rgba(255,255,255,.08);color:#dfe7ef;margin:6px 0 8px}
+.chip.alert{background:rgba(229,96,107,.16);color:#ff9aa2}
+.radar p{margin:0;font-size:14px}
+.tax-box{margin-top:16px;padding:16px;border-radius:var(--r-md);background:rgba(239,164,61,.1);border:1px solid rgba(239,164,61,.38);font-size:13px;color:#f8dfbd}
+.tax-box b{color:#ffd293;display:block;margin-bottom:4px}
+
+/* results */
+.report-meta{font-size:13px;color:var(--muted);margin:-4px 0 14px}
+.score-ring{width:210px;height:210px;margin:12px auto 16px;position:relative;display:grid;place-items:center}
+.score-ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.score-ring .trk{stroke:rgba(255,255,255,.09)}
+.score-ring .val{transition:stroke-dashoffset 1s ease}
+.score-val{position:relative;text-align:center}
+.score-val strong{display:block;font-size:48px;line-height:1}
+.score-val span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+.status{text-align:center;font-size:22px;font-weight:900;margin-bottom:6px}
+.status-copy{text-align:center;color:#c9d4de;max-width:440px;margin:0 auto}
+.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0 20px}
+.category-box{padding:13px;border:1px solid var(--line);border-radius:var(--r-sm);background:rgba(255,255,255,.035)}
+.category-box .top{display:flex;justify-content:space-between;gap:8px;margin-bottom:8px;font-size:14px}
+.report-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.list{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:8px}
+.list li{padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);font-size:14px}
+.strength li{border-left:4px solid var(--green)}.risk li{border-left:4px solid var(--red)}.action li{border-left:4px solid var(--gold)}
+.priorities{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.priority{padding:16px;border:1px solid var(--line);border-radius:var(--r-md);background:rgba(255,255,255,.04)}
+.priority .num{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--bg);font-weight:900;margin-bottom:9px}
+.priority b{display:block;margin-bottom:5px}
+.priority span{font-size:13px;color:#c6d2dd}
+.stack>*+*{margin-top:20px}
+.cta{background:linear-gradient(145deg,rgba(216,173,74,.18),rgba(255,255,255,.03))}
+.cta h2{font-size:clamp(24px,3vw,32px)}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.notice{box-shadow:none;font-size:12px;color:#b7c4d0;line-height:1.65}
+.footer{text-align:center;color:#7d8a98;font-size:12px;padding:26px 12px 30px}
+
+@media (max-width:900px){
+  .hero,.grid-2{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr}
+  .shield-wrap{width:min(100%,260px)}
+  .priorities{grid-template-columns:1fr}
+  .stepper .lbl{display:none}
+  .side{order:2}
+}
+@media (max-width:620px){
+  .choices,.category-grid,.report-cols{grid-template-columns:1fr}
+  .option{min-height:0}
+  .nav .keys,.desktop-only,.stepper{display:none}
+  .brand-name{font-size:12px}
+  .hud-score{min-width:92px}
+  .nav .btn{flex:1}
+  .actions .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+@media print{
+  @page{margin:14mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff!important;color:#111}
+  .site-header .stepper,.skip,.noprint,.footer,#hero,#setup,#game{display:none!important}
+  #results{display:block!important;animation:none}
+  .wrap{max-width:none;padding:0}
+  .card{background:#fff;color:#111;box-shadow:none;border:1px solid #ccc;break-inside:avoid}
+  .brand{color:#111}.brand small,.report-meta,.score-val span{color:#555}
+  .pill{color:#7a5a12;border-color:#ccc;background:#fff}
+  .score-ring .trk{stroke:#e5e5e5}
+  .sub,.status-copy,.notice,.priority span{color:#333}
+  .list li,.category-box,.priority{background:#fafafa;color:#111;border-color:#ddd}
+  .cat-track{background:#e5e5e5}
+  .report-cols,.priorities{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="site-header">
+  <div class="brand"><div class="logo" aria-hidden="true">FWP</div><div class="brand-name">FAMILY WEALTH PROTECTION ADVISERS<small>PROTECT • PRESERVE • TRANSFER</small></div></div>
+  <ol class="stepper" id="stepper" aria-label="Assessment progress">
+    <li data-step="1"><span class="n">1</span><span class="lbl">Profile</span></li>
+    <li data-step="2"><span class="n">2</span><span class="lbl">Stress test</span></li>
+    <li data-step="3"><span class="n">3</span><span class="lbl">Report</span></li>
+  </ol>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- HERO -->
+<section class="screen active" id="hero" aria-labelledby="heroTitle">
+  <div class="card hero">
+    <div>
+      <div class="pill">THE FAMILY WEALTH FORTRESS™ <span class="desktop-only" aria-hidden="true">· V4</span></div>
+      <h1 id="heroTitle">How protected is your <span class="gold">family wealth?</span></h1>
+      <p class="lead">Stress-test your Will, trusts, superannuation, business succession and family protection strategy—and identify the gaps before they become expensive problems.</p>
+      <div class="hero-grid">
+        <div class="hero-mini"><b>15 strategic checks</b>Fast, visual review across the whole family wealth system.</div>
+        <div class="hero-mini"><b>2027 tax stress test</b>Focus on the proposed post-1 July 2027 tax environment.</div>
+        <div class="hero-mini"><b>Adviser-ready report</b>Turn results into an agenda for professional review.</div>
+      </div>
+      <div class="start-card">
+        <h2>You built the wealth. Now test the fortress.</h2>
+        <p>Every answer strengthens a wall—or exposes a potential breach. This is an educational strategic health check, not a legal or financial product recommendation.</p>
+        <button class="btn primary wide" id="startBtn" type="button">Start my Fortress Assessment →</button>
+        <button class="btn ghost wide" id="resumeBtn" type="button" hidden>Resume my saved assessment</button>
+      </div>
+    </div>
+    <div class="visual" aria-hidden="true">
+      <div class="shield-wrap">
+        <svg class="shield" viewBox="0 0 300 345" role="presentation">
+          <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2d27f"/><stop offset="1" stop-color="#b9872f"/></linearGradient></defs>
+          <path d="M150 4 284 52 263 248 150 341 37 248 16 52Z" fill="url(#sg)"/>
+          <path d="M150 22 266 63 248 240 150 321 52 240 34 63Z" fill="none" stroke="#06111f" stroke-opacity=".18" stroke-width="3"/>
+          <g font-family="Inter,system-ui,Segoe UI,Arial,sans-serif" font-weight="900" font-size="30" fill="#06111f" text-anchor="middle">
+            <text x="150" y="138">FAMILY</text><text x="150" y="176">WEALTH</text><text x="150" y="214">FORTRESS</text>
+          </g>
+        </svg>
+        <div class="threat t1">⚖️</div><div class="threat t2">💔</div><div class="threat t3">🦈</div><div class="threat t4">🏛️</div>
+      </div>
+      <div class="countdown"><b id="daysLeft">— days</b><span>until 1 July 2027</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SETUP -->
+<section class="screen" id="setup" aria-labelledby="setupTitle">
+  <div class="screen-head"><button class="btn ghost" type="button" id="setupBack">← Back to overview</button></div>
+  <div class="grid-2">
+    <div class="card">
+      <h2 id="setupTitle" tabindex="-1">Choose your family profile</h2>
+      <p class="sub">Your pathway adapts to the structures most relevant to you.</p>
+      <div class="choices" id="profiles" role="radiogroup" aria-labelledby="setupTitle"></div>
+    </div>
+    <form class="card" id="setupForm" novalidate>
+      <h2>Personalise your report</h2>
+      <p class="sub">Optional. These details stay in this browser session.</p>
+      <div class="field"><label for="clientName">Your name</label><input id="clientName" autocomplete="name" placeholder="e.g. John Smith"></div>
+      <div class="field"><label for="familyName">Family / business name</label><input id="familyName" autocomplete="organization" placeholder="e.g. Smith Family"></div>
+      <div class="field"><label for="postcode">Postcode</label><input id="postcode" inputmode="numeric" autocomplete="postal-code" placeholder="e.g. 4000"></div>
+      <p class="hint" id="beginHint">Select a family profile to continue.</p>
+      <button class="btn primary wide" id="beginBtn" type="submit" disabled aria-describedby="beginHint">Begin stress test →</button>
+    </form>
+  </div>
+</section>
+
+<!-- GAME -->
+<section class="screen" id="game" aria-labelledby="questionText">
+  <div class="hud">
+    <div>
+      <div class="progress-meta"><span id="qCounter">Question 1 of 1</span><span id="qPct">0% complete</span></div>
+      <div class="progress" role="progressbar" aria-label="Assessment progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress"><div class="bar" id="progressBar"></div></div>
+    </div>
+    <div class="hud-score" aria-live="polite"><b id="liveScore">0%</b><span>Fortress score</span></div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="pill" id="sectionPill">Assessment</div>
+      <h2 class="question" id="questionText" tabindex="-1"></h2>
+      <p class="sub" id="questionSub"></p>
+      <div class="choices options" id="options" role="radiogroup" aria-labelledby="questionText"></div>
+      <div class="warning" id="warningBox" role="status" aria-live="polite" hidden></div>
+      <div class="nav">
+        <button class="btn outline" id="backBtn" type="button">← Back</button>
+        <span class="keys" aria-hidden="true"><span class="kbd">1</span>–<span class="kbd">4</span> choose · <span class="kbd">↵</span> continue</span>
+        <button class="btn primary" id="nextBtn" type="button" disabled>Continue →</button>
+      </div>
+    </div>
+    <aside class="card side" aria-label="Fortress systems">
+      <h2>Fortress systems</h2>
+      <div id="categoryBars"></div>
+      <div class="radar" aria-live="polite">
+        <div class="big" id="radarIcon" aria-hidden="true">🛡️</div>
+        <b id="radarTitle">Threat radar</b><br>
+        <span class="chip" id="radarChip">Scanning</span>
+        <p class="sub" id="radarCopy">Potential family wealth threats will appear here.</p>
+      </div>
+      <div class="tax-box">
+        <b>2027 Tax Readiness</b>
+        The supplied 2026 Budget material describes proposed CGT changes from 1 July 2027. This module is designed to prompt review of existing Wills, trusts and super structures before relying on historic tax assumptions.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="screen" id="results" aria-labelledby="reportTitle">
+  <div class="stack">
+    <div class="grid-2" style="grid-template-columns:.8fr 1.2fr">
+      <div class="card">
+        <div class="pill">FINAL FORTRESS SCORE</div>
+        <div class="score-ring" role="img" id="scoreRingWrap" aria-label="Fortress score">
+          <svg viewBox="0 0 210 210" width="210" height="210" aria-hidden="true">
+            <circle class="trk" cx="105" cy="105" r="92" fill="none" stroke-width="18"/>
+            <circle class="val" id="scoreArc" cx="105" cy="105" r="92" fill="none" stroke-width="18" stroke-linecap="round" stroke="#e5606b" stroke-dasharray="578.05" stroke-dashoffset="578.05"/>
+          </svg>
+          <div class="score-val"><strong id="finalScore">0%</strong><span>Protected</span></div>
+        </div>
+        <div class="status" id="statusTitle"></div>
+        <p class="status-copy" id="statusCopy"></p>
+      </div>
+      <div class="card">
+        <h2 id="reportTitle" tabindex="-1">Family Wealth Protection Report</h2>
+        <p class="report-meta" id="reportMeta"></p>
+        <div class="category-grid" id="categoryGrid"></div>
+        <div class="report-cols">
+          <div><h3>Current strengths</h3><ul class="list strength" id="strengthList"></ul></div>
+          <div><h3>Priority risks</h3><ul class="list risk" id="riskList"></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Top strategic review priorities</h2>
+      <div class="priorities" id="priorityGrid"></div>
+      <h3 style="margin-top:22px">Suggested professional review actions</h3>
+      <ul class="list action" id="actionList"></ul>
+    </div>
+
+    <div class="card cta">
+      <h2>Your family has trusted you to build its future. Now protect it.</h2>
+      <p class="sub">Use this report as the starting point for a coordinated review of your estate planning, trusts, superannuation, business structures, tax position and succession arrangements.</p>
+      <div class="actions noprint">
+        <a class="btn primary" id="bookBtn" href="mailto:grant@grantabbott.com?subject=Family%20Wealth%20Fortress%20Review">Book a Fortress Review</a>
+        <button class="btn dark" type="button" id="printBtn">Print my report</button>
+        <button class="btn outline" type="button" id="restartBtn">Start again</button>
+      </div>
+    </div>
+
+    <div class="card notice">
+      <strong>Important:</strong> This interactive tool provides general educational information only. It is not legal, taxation or financial product advice and does not take into account your objectives, financial situation or needs. The 2027 module is framed as a stress test of proposed changes and must be checked against enacted law before implementation. Recommendations concerning acquiring, disposing of, or remaining in an SMSF may constitute financial product advice and may require appropriate AFS licensing.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">Family Wealth Protection Advisers • Family Wealth Fortress™ • Version 4 website prototype</footer>
+</div>
+
+<script>
+"use strict";
+/* ===== Content (unchanged from original V4) ===== */
+const profiles = [
+  {id:"family",icon:"👨‍👩‍👧‍👦",title:"Family & Property",copy:"Home, investments, children and estate planning."},
+  {id:"business",icon:"🏢",title:"Business Owner",copy:"Companies, trusts, directors, creditors and succession."},
+  {id:"smsf",icon:"📈",title:"SMSF Family",copy:"SMSF governance, incapacity, death benefits and succession."},
+  {id:"blended",icon:"🧩",title:"Blended Family",copy:"Competing family interests, stepchildren and inheritance protection."}
+];
+
+const baseQuestions = [
+  {
+    key:"will",cat:"estate",section:"Estate & Legacy",
+    title:"Do you have a current, professionally reviewed Will?",
+    sub:"A Will is foundational, but it should reflect your current family, assets, control arrangements and intentions.",
+    options:[
+      {label:"Yes — reviewed recently",v:2,icon:"✅",note:"Current and aligned to my circumstances."},
+      {label:"Yes — but it is older",v:1,icon:"🟠",note:"It may not reflect recent changes."},
+      {label:"No Will",v:0,icon:"⚠️",note:"No current Will is in place."},
+      {label:"I am not sure",v:0,icon:"❓",note:"Validity and suitability are unclear."}
+    ],
+    warning:"An absent or outdated Will can create unintended succession outcomes, disputes and unnecessary administration.",
+    strength:"Current Will in place",risk:"No clearly current and effective Will",
+    action:"Review or establish a current Will aligned with family, tax and succession objectives.",
+    priority:"Modernise the estate plan"
+  },
+  {
+    key:"tt",cat:"estate",section:"Estate & Legacy",
+    title:"Does your Will include tailored testamentary trust options?",
+    sub:"Testamentary trusts can provide flexibility and may improve control, beneficiary protection and tax outcomes depending on the circumstances.",
+    options:[
+      {label:"Yes — tailored provisions",v:2,icon:"🏛️",note:"Specific trust options are built in."},
+      {label:"Basic trust provisions",v:1,icon:"📄",note:"The drafting may need review."},
+      {label:"No testamentary trust",v:0,icon:"⚠️",note:"Benefits pass directly."},
+      {label:"I do not know",v:0,icon:"❓",note:"This has not been reviewed."}
+    ],
+    warning:"Direct inheritances may be more exposed to a beneficiary's relationship breakdown, bankruptcy, poor financial control or other personal risks.",
+    strength:"Testamentary trust strategy identified",risk:"No clear testamentary trust strategy",
+    action:"Assess whether tailored testamentary trust provisions are appropriate for intended beneficiaries.",
+    priority:"Protect inheritances"
+  },
+  {
+    key:"epoa",cat:"control",section:"Control & Incapacity",
+    title:"Do you have a current Enduring Power of Attorney?",
+    sub:"Incapacity can affect control of personal affairs, companies, trusts and SMSFs.",
+    options:[
+      {label:"Yes — current and suitable",v:2,icon:"🤝",note:"Trusted attorneys are appointed."},
+      {label:"Yes — but older",v:1,icon:"🟠",note:"It may need updating."},
+      {label:"No",v:0,icon:"⚠️",note:"No attorney is appointed."},
+      {label:"I am not sure",v:0,icon:"❓",note:"Current arrangements are unclear."}
+    ],
+    warning:"Without effective incapacity planning, control may be delayed, disputed or require formal appointment processes.",
+    strength:"Current EPOA in place",risk:"No clearly current Enduring Power of Attorney",
+    action:"Review EPOA appointments and how they interact with trusts, companies and any SMSF.",
+    priority:"Protect decision-making"
+  },
+  {
+    key:"fpt",cat:"asset",section:"Asset Protection",
+    title:"Do you have a Family Protection Trust or comparable protection structure?",
+    sub:"Ownership and control can influence exposure to creditors, litigation, succession disputes and family law claims.",
+    options:[
+      {label:"Yes — structured and reviewed",v:2,icon:"🏰",note:"A deliberate protection structure exists."},
+      {label:"I have a family trust only",v:1,icon:"🧱",note:"The deed and control positions may need review."},
+      {label:"No",v:0,icon:"⚠️",note:"No dedicated protection structure exists."},
+      {label:"I am not sure",v:0,icon:"❓",note:"I do not understand the current structure."}
+    ],
+    warning:"Personal ownership or an outdated trust may leave avoidable exposure. Asset protection generally works best when established lawfully and before a claim arises.",
+    strength:"Family asset-protection structure in place",risk:"No clear Family Protection Trust or equivalent strategy",
+    action:"Map asset ownership and assess lawful risk-separation and family protection structures.",
+    priority:"Separate risk from wealth"
+  },
+  {
+    key:"familyrisk",cat:"asset",section:"Asset Protection",
+    title:"Have divorce, bankruptcy and creditor risks in the next generation been considered?",
+    sub:"An inheritance can become exposed after it reaches a child or other beneficiary.",
+    options:[
+      {label:"Yes — specifically addressed",v:2,icon:"🛡️",note:"Beneficiary risks were considered."},
+      {label:"Discussed only",v:1,icon:"🟠",note:"No complete structure is in place."},
+      {label:"No",v:0,icon:"⚠️",note:"These risks were not addressed."},
+      {label:"I am not sure",v:0,icon:"❓",note:"I have never reviewed this."}
+    ],
+    warning:"Family wealth can leave the intended family line through relationship breakdown, bankruptcy, creditor claims or poorly controlled inheritances.",
+    strength:"Next-generation risks considered",risk:"Next-generation family law and creditor risks are not clearly addressed",
+    action:"Review how inheritances and family assets may be protected for intended beneficiaries.",
+    priority:"Defend family wealth"
+  },
+  {
+    key:"super",cat:"super",section:"Super & SMSF",
+    title:"Has your superannuation death-benefit strategy been coordinated with your estate plan?",
+    sub:"Superannuation does not automatically follow a personal Will. Trustee control, nominations and tax treatment can matter.",
+    options:[
+      {label:"Yes — integrated review",v:2,icon:"🛡️",note:"Super and estate documents align."},
+      {label:"Partly reviewed",v:1,icon:"🟠",note:"Some gaps may remain."},
+      {label:"No",v:0,icon:"⚠️",note:"No coordinated strategy exists."},
+      {label:"I am not sure",v:0,icon:"❓",note:"I do not know."}
+    ],
+    warning:"Misalignment between superannuation and estate documents can create tax, succession and control problems.",
+    strength:"Superannuation coordinated with estate plan",risk:"Superannuation and estate planning may be misaligned",
+    action:"Review nominations, trustee discretion, tax dependants and estate strategy together.",
+    priority:"Integrate super and estate planning"
+  },
+  {
+    key:"review",cat:"estate",section:"Estate & Legacy",
+    title:"Has the whole family wealth plan been reviewed together in the last three years?",
+    sub:"Documents prepared at different times by different advisers can conflict or leave control gaps.",
+    options:[
+      {label:"Yes — comprehensive review",v:2,icon:"✅",note:"All structures were reviewed together."},
+      {label:"Some documents only",v:1,icon:"🟠",note:"The review was not integrated."},
+      {label:"No recent review",v:0,icon:"⚠️",note:"The plan may no longer fit."},
+      {label:"Never reviewed together",v:0,icon:"❓",note:"Advisers looked at separate parts."}
+    ],
+    warning:"A collection of documents is not necessarily an integrated family wealth strategy.",
+    strength:"Integrated strategy recently reviewed",risk:"No recent integrated family wealth review",
+    action:"Complete a coordinated family wealth review across estate planning, tax, super, trusts and companies.",
+    priority:"Coordinate the fortress"
+  },
+  {
+    key:"taxwill",cat:"tax",section:"2027 Tax Readiness",
+    title:"Has your Will been stress-tested for the proposed post-1 July 2027 tax environment?",
+    sub:"The supplied 2026 Budget material describes proposed CGT changes from 1 July 2027. Existing estate structures should be reviewed for their consequences.",
+    options:[
+      {label:"Yes — specifically reviewed",v:2,icon:"✅",note:"The plan has been modelled against the proposed changes."},
+      {label:"Not since the changes were proposed",v:1,icon:"🟠",note:"Historic assumptions may remain."},
+      {label:"No",v:0,icon:"🚨",note:"No 2027 stress test has been done."},
+      {label:"I am not sure",v:0,icon:"❓",note:"I do not know what the tax impact may be."}
+    ],
+    warning:"Your Will may have been designed for an earlier tax environment. Review is warranted before relying on historic assumptions.",
+    strength:"Will reviewed for proposed 2027 settings",risk:"Will has not been stress-tested for proposed 2027 tax changes",
+    action:"Model estate and testamentary trust outcomes under the proposed post-1 July 2027 tax settings.",
+    priority:"Stress-test the Will"
+  },
+  {
+    key:"taxtrust",cat:"tax",section:"2027 Tax Readiness",
+    title:"Have your existing discretionary trusts been reviewed for the proposed 2027 tax changes?",
+    sub:"Trust distribution, CGT and succession assumptions should be checked before the proposed new settings commence.",
+    options:[
+      {label:"Yes — full review completed",v:2,icon:"✅",note:"Tax and control settings were reviewed together."},
+      {label:"Partly",v:1,icon:"🟠",note:"Some issues remain."},
+      {label:"No",v:0,icon:"🚨",note:"The trust has not been reviewed."},
+      {label:"I am not sure",v:0,icon:"❓",note:"I do not know whether the deed or tax strategy still fits."}
+    ],
+    warning:"An existing trust may still be legally valid yet operate differently from a tax-efficiency or succession perspective under changed tax settings.",
+    strength:"Existing trusts reviewed for proposed 2027 settings",risk:"Existing discretionary trusts have not been reviewed for proposed 2027 tax changes",
+    action:"Review trust deeds, distribution strategy, capital gains treatment, control positions and succession before 1 July 2027.",
+    priority:"Review the trust architecture"
+  },
+  {
+    key:"taxsuper",cat:"tax",section:"2027 Tax Readiness",
+    title:"Have your superannuation and SMSF structures been reviewed for the 2026–27 and 2027 changes?",
+    sub:"The supplied materials identify significant superannuation tax changes commencing from the 2026–27 income year, including higher-balance settings.",
+    options:[
+      {label:"Yes — fully reviewed",v:2,icon:"✅",note:"Super, tax and estate impacts were considered."},
+      {label:"Partly reviewed",v:1,icon:"🟠",note:"Some strategic issues remain."},
+      {label:"No",v:0,icon:"🚨",note:"No structured review has occurred."},
+      {label:"I am not sure",v:0,icon:"❓",note:"I do not know whether the current structure remains optimal."}
+    ],
+    warning:"Superannuation structures can remain compliant while becoming strategically inefficient. Tax and succession consequences should be reviewed together.",
+    strength:"Super structures reviewed for current/proposed settings",risk:"Superannuation or SMSF structure has not been reviewed for the current/proposed tax changes",
+    action:"Review super balance exposure, SMSF governance, estate planning and tax strategy under the current/proposed settings.",
+    priority:"Re-test the SMSF strategy"
+  }
+];
+
+const profileQuestions = {
+  family:[
+    {
+      key:"familyhome",cat:"asset",section:"Asset Protection",
+      title:"Are major family assets still held personally without a protection review?",
+      sub:"Personal ownership can be simple, but it may also concentrate risk.",
+      options:[
+        {label:"No — ownership reviewed",v:2,icon:"🛡️",note:"Ownership has been strategically reviewed."},
+        {label:"Some assets are personal",v:1,icon:"🟠",note:"Exposure may be mixed."},
+        {label:"Yes — most assets are personal",v:0,icon:"⚠️",note:"No protection review has occurred."},
+        {label:"I am not sure",v:0,icon:"❓",note:"I have not mapped ownership."}
+      ],
+      warning:"Personally held assets may be more exposed to litigation, creditor and succession risks.",
+      strength:"Major asset ownership reviewed",risk:"Major family assets may be personally exposed",
+      action:"Map ownership of the family home, investments and major assets and assess protection options.",
+      priority:"Review asset ownership"
+    }
+  ],
+  business:[
+    {
+      key:"business",cat:"control",section:"Business Succession",
+      title:"Does your business have a documented continuity and succession plan?",
+      sub:"Death, incapacity or dispute can interrupt trading and company control.",
+      options:[
+        {label:"Yes — documented plan",v:2,icon:"📘",note:"The business can continue under a clear plan."},
+        {label:"Informal arrangements",v:1,icon:"🟠",note:"Not fully documented."},
+        {label:"No formal plan",v:0,icon:"⚠️",note:"The business depends on key people."},
+        {label:"I am not sure",v:0,icon:"❓",note:"Control has not been mapped."}
+      ],
+      warning:"A Will does not necessarily solve immediate company-control problems. Sole-director and trustee-company structures may need specific succession planning.",
+      strength:"Business continuity addressed",risk:"Business or company control may be exposed",
+      action:"Review director succession, shareholder arrangements, trustee control and business continuity.",
+      priority:"Secure business continuity"
+    },
+    {
+      key:"creditor",cat:"asset",section:"Asset Protection",
+      title:"Are business risks quarantined from key family assets?",
+      sub:"Trading risk, personal guarantees and director exposure can create direct family wealth risk.",
+      options:[
+        {label:"Yes — deliberately separated",v:2,icon:"🧱",note:"Structures and guarantees are reviewed."},
+        {label:"Partly separated",v:1,icon:"🟠",note:"Some exposure remains."},
+        {label:"No",v:0,icon:"⚠️",note:"Key assets may be exposed."},
+        {label:"I am not sure",v:0,icon:"❓",note:"No risk map exists."}
+      ],
+      warning:"One business failure, claim or director liability can threaten assets accumulated over decades.",
+      strength:"Business risk separated from family wealth",risk:"Business and family wealth may be insufficiently separated",
+      action:"Map guarantees, ownership, company roles and creditor exposure across the family group.",
+      priority:"Quarantine trading risk"
+    }
+  ],
+  smsf:[
+    {
+      key:"smsfstrategy",cat:"super",section:"Super & SMSF",
+      title:"Is your SMSF strategically reviewed—not just administered?",
+      sub:"A compliant annual return does not necessarily mean the fund is strategically structured for control, incapacity, tax or death.",
+      options:[
+        {label:"Yes — strategic review",v:2,icon:"📈",note:"The fund is actively reviewed."},
+        {label:"Administration only",v:1,icon:"🧾",note:"Strategy and succession need attention."},
+        {label:"No recent review",v:0,icon:"⚠️",note:"The fund may be outdated."},
+        {label:"I am not sure",v:0,icon:"❓",note:"I do not know."}
+      ],
+      warning:"SMSF trustees carry legal responsibilities, and strategic gaps can remain even where compliance work is up to date.",
+      strength:"SMSF strategy actively reviewed",risk:"SMSF may lack strategic review",
+      action:"Review SMSF governance, deed, control, investment strategy, incapacity and estate planning.",
+      priority:"Upgrade SMSF strategy"
+    },
+    {
+      key:"smsfwill",cat:"super",section:"Super & SMSF",
+      title:"Does your SMSF have a documented death-benefit strategy or SMSF Will?",
+      sub:"Superannuation does not automatically follow your personal Will.",
+      options:[
+        {label:"Yes — documented and reviewed",v:2,icon:"🛡️",note:"An integrated strategy exists."},
+        {label:"Only a BDBN",v:1,icon:"📌",note:"The deed and nomination need checking together."},
+        {label:"No strategy",v:0,icon:"⚠️",note:"No integrated succession plan exists."},
+        {label:"I am not sure",v:0,icon:"❓",note:"Documents are unclear."}
+      ],
+      warning:"Poorly integrated SMSF documents or trustee-control gaps can create tax, litigation and succession risks.",
+      strength:"SMSF death-benefit strategy addressed",risk:"No integrated SMSF Will or death-benefit strategy",
+      action:"Review the SMSF deed, trustee control, pensions and death-benefit documents together.",
+      priority:"Control super on death"
+    }
+  ],
+  blended:[
+    {
+      key:"blended",cat:"estate",section:"Estate & Legacy",
+      title:"Does your estate plan specifically address a blended family?",
+      sub:"Stepchildren, former partners and competing family expectations can create unique risks.",
+      options:[
+        {label:"Yes — tailored plan",v:2,icon:"🧩",note:"Competing interests were considered."},
+        {label:"Partly",v:1,icon:"🟠",note:"Some issues remain."},
+        {label:"No",v:0,icon:"⚠️",note:"The plan is generic."},
+        {label:"I am not sure",v:0,icon:"❓",note:"No specific review has occurred."}
+      ],
+      warning:"A generic Will may not adequately manage competing interests between a spouse, children and stepchildren.",
+      strength:"Blended-family estate risks addressed",risk:"Blended-family risks are not clearly addressed",
+      action:"Review spouse, children, stepchildren, control and claim risks together.",
+      priority:"Resolve competing family interests"
+    },
+    {
+      key:"controltrust",cat:"control",section:"Control & Succession",
+      title:"Are trust and company control positions protected from family conflict?",
+      sub:"Control can be just as important as beneficial ownership.",
+      options:[
+        {label:"Yes — successors documented",v:2,icon:"🧭",note:"Control passes under a clear plan."},
+        {label:"Partly documented",v:1,icon:"🟠",note:"Some gaps remain."},
+        {label:"No clear succession",v:0,icon:"⚠️",note:"Control depends on one person."},
+        {label:"I am not sure",v:0,icon:"❓",note:"The control map is unclear."}
+      ],
+      warning:"A strong Will can still fail if control of trusts or companies passes to the wrong person or becomes disputed.",
+      strength:"Trust and company succession addressed",risk:"Control positions may be exposed or unclear",
+      action:"Review appointors, directors, shareholders and successor controllers.",
+      priority:"Protect control, not just ownership"
+    }
+  ]
+};
+
+const categoryMeta = {
+  estate:{label:"Estate & Legacy",icon:"🏛️"},
+  asset:{label:"Asset Protection",icon:"🛡️"},
+  super:{label:"Super & SMSF",icon:"📈"},
+  control:{label:"Control & Succession",icon:"🔑"},
+  tax:{label:"2027 Tax Readiness",icon:"⏳"}
+};
+
+
+/* ===== App ===== */
+(function(){
+const $=id=>document.getElementById(id);
+const STORE="fwf-v4-state";
+const COLORS={green:"#3cc68a",amber:"#efa43d",red:"#e5606b"};
+const ARC=2*Math.PI*92;
+let selectedProfile=null,questions=[],current=0,answers={},screen="hero";
+
+const store={
+  save(){try{sessionStorage.setItem(STORE,JSON.stringify({selectedProfile,current,answers,screen,
+    clientName:$("clientName").value,familyName:$("familyName").value,postcode:$("postcode").value}))}catch(e){}},
+  load(){try{return JSON.parse(sessionStorage.getItem(STORE)||"null")}catch(e){return null}},
+  clear(){try{sessionStorage.removeItem(STORE)}catch(e){}}
+};
+const band=v=>v>=75?COLORS.green:v>=50?COLORS.amber:COLORS.red;
+
+function show(id,focusEl){
+  screen=id;
+  document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id===id));
+  const step={hero:0,setup:1,game:2,results:3}[id];
+  document.querySelectorAll("#stepper li").forEach(li=>{
+    const n=+li.dataset.step;
+    li.classList.toggle("active",n===step);li.classList.toggle("done",n<step);
+    if(n===step)li.setAttribute("aria-current","step");else li.removeAttribute("aria-current");
+  });
+  window.scrollTo({top:0,behavior:"smooth"});
+  if(focusEl)setTimeout(()=>focusEl.focus({preventScroll:true}),50);
+  store.save();
+}
+
+function initCountdown(){
+  const target=new Date("2027-07-01T00:00:00");
+  const days=Math.max(0,Math.ceil((target-new Date())/864e5));
+  $("daysLeft").textContent=days.toLocaleString("en-AU")+" days";
+}
+
+/* radio-group helper: roving tabindex + arrow keys */
+function makeChoice(container,items,selectedIdx,onSelect,extraClass){
+  container.innerHTML="";
+  items.forEach((it,i)=>{
+    const b=document.createElement("button");
+    b.type="button";b.className="choice "+(extraClass||"");
+    b.setAttribute("role","radio");
+    b.setAttribute("aria-checked",String(i===selectedIdx));
+    b.tabIndex=(selectedIdx==null?i===0:i===selectedIdx)?0:-1;
+    const ico=document.createElement("div");ico.className="ico";ico.setAttribute("aria-hidden","true");ico.textContent=it.icon;
+    const txt=document.createElement("div");
+    const t=document.createElement("b");t.textContent=it.title;
+    const s=document.createElement("span");s.textContent=it.copy;
+    txt.append(t,s);b.append(ico,txt);
+    b.addEventListener("click",()=>onSelect(i));
+    b.addEventListener("keydown",e=>{
+      const k=e.key,btns=[...container.children];let n=null;
+      if(k==="ArrowDown"||k==="ArrowRight")n=(i+1)%btns.length;
+      if(k==="ArrowUp"||k==="ArrowLeft")n=(i-1+btns.length)%btns.length;
+      if(n!==null){e.preventDefault();btns[n].focus();}
+    });
+    container.appendChild(b);
+  });
+}
+
+/* ---- Setup ---- */
+function renderProfiles(){
+  const idx=profiles.findIndex(p=>p.id===selectedProfile);
+  makeChoice($("profiles"),profiles,idx<0?null:idx,i=>{
+    selectedProfile=profiles[i].id;renderProfiles();
+    $("profiles").children[i].focus();
+    store.save();
+  },"profile-choice");
+  $("beginBtn").disabled=!selectedProfile;
+  $("beginHint").textContent=selectedProfile?"Profile selected: "+profiles[idx<0?0:idx].title+".":"Select a family profile to continue.";
+}
+function openSetup(){renderProfiles();show("setup",$("setupTitle"));}
+
+function buildQuestions(){questions=[...baseQuestions,...(profileQuestions[selectedProfile]||[])];}
+function beginAssessment(e){
+  if(e)e.preventDefault();
+  if(!selectedProfile)return;
+  buildQuestions();current=0;answers={};
+  buildCategoryBars();renderQuestion();
+  show("game",$("questionText"));
+}
+
+/* ---- Game ---- */
+function buildCategoryBars(){
+  const wrap=$("categoryBars");wrap.innerHTML="";
+  Object.entries(categoryMeta).forEach(([key,meta])=>{
+    const row=document.createElement("div");row.className="cat-row";
+    row.innerHTML=`<div class="cat-head"><span><span aria-hidden="true">${meta.icon}</span> ${meta.label}</span><b id="${key}Pct">0%</b></div><div class="cat-track"><div class="cat-fill" id="${key}Bar"></div></div>`;
+    wrap.appendChild(row);
+  });
+}
+function renderQuestion(){
+  const q=questions[current],a=answers[q.key];
+  $("sectionPill").textContent=q.section;
+  $("questionText").textContent=q.title;
+  $("questionSub").textContent=q.sub;
+  const pct=Math.round(current/questions.length*100);
+  $("progressBar").style.width=pct+"%";
+  $("progress").setAttribute("aria-valuenow",pct);
+  $("qCounter").textContent=`Question ${current+1} of ${questions.length}`;
+  $("qPct").textContent=pct+"% complete";
+  makeChoice($("options"),q.options.map(o=>({icon:o.icon,title:o.label,copy:o.note})),a?a.i:null,selectOption,"option");
+  $("nextBtn").disabled=!a;
+  $("nextBtn").textContent=current===questions.length-1?"See my report →":"Continue →";
+  const w=$("warningBox");
+  if(a&&a.v<2){w.hidden=false;w.innerHTML="";const s=document.createElement("strong");s.textContent="⚠ Fortress breach detected";w.append(s,document.createTextNode(q.warning));}
+  else{w.hidden=true;w.innerHTML="";}
+  updateLive();
+}
+function selectOption(i){
+  const q=questions[current],o=q.options[i];
+  answers[q.key]={i,v:o.v,label:o.label};
+  renderQuestion();
+  $("options").children[i].focus();
+  store.save();
+}
+function goNext(){
+  if(!answers[questions[current].key])return;
+  if(current<questions.length-1){current++;renderQuestion();$("questionText").focus({preventScroll:true});window.scrollTo({top:0,behavior:"smooth"});store.save();}
+  else finish();
+}
+function goBack(){
+  if(current>0){current--;renderQuestion();$("questionText").focus({preventScroll:true});store.save();}
+  else openSetup();
+}
+
+function categoryScore(cat){
+  const qs=questions.filter(q=>q.cat===cat);
+  if(!qs.length)return 100;
+  const got=qs.reduce((s,q)=>s+(answers[q.key]?.v??0),0);
+  return Math.round(got/(qs.length*2)*100);
+}
+function overallScore(){
+  if(!questions.length)return 0;
+  const got=questions.reduce((s,q)=>s+(answers[q.key]?.v??0),0);
+  return Math.round(got/(questions.length*2)*100);
+}
+function updateLive(){
+  $("liveScore").textContent=overallScore()+"%";
+  Object.keys(categoryMeta).forEach(cat=>{
+    const v=categoryScore(cat),b=$(cat+"Bar"),p=$(cat+"Pct");
+    if(b)b.style.width=v+"%";if(p)p.textContent=v+"%";
+  });
+  const gaps=questions.filter(q=>(answers[q.key]?.v??2)<2);
+  let icon="🛡️",title="Threat radar",copy="No major threat is currently dominant.",chip="Scanning",alert=false;
+  if(gaps.length){
+    const g=gaps[gaps.length-1];
+    if(g.cat==="estate"){icon="⚖️";title="Estate / inheritance risk";copy="Outdated or generic estate documents may create unnecessary conflict, tax or succession issues."}
+    if(g.cat==="asset"){icon="🦈";title="Creditor / family law risk";copy="Ownership or beneficiary exposure may weaken family wealth protection."}
+    if(g.cat==="super"){icon="📉";title="Superannuation control risk";copy="Super and SMSF benefits may not pass or be controlled as expected without integrated planning."}
+    if(g.cat==="control"){icon="🔑";title="Control succession risk";copy="The wrong or delayed controller can undermine an otherwise good plan."}
+    if(g.cat==="tax"){icon="⏳";title="2027 tax readiness risk";copy="Historic tax assumptions may need to be re-tested before 1 July 2027."}
+    chip="Active threat";alert=true;
+  }
+  $("radarIcon").textContent=icon;$("radarTitle").textContent=title;$("radarCopy").textContent=copy;
+  const ch=$("radarChip");ch.textContent=chip;ch.classList.toggle("alert",alert);
+}
+
+/* ---- Results ---- */
+function fillList(id,items){
+  const el=$(id);el.innerHTML="";
+  items.forEach(x=>{const li=document.createElement("li");li.textContent=x;el.appendChild(li)});
+}
+function finish(){
+  const score=overallScore(),color=band(score);
+  const arc=$("scoreArc");arc.setAttribute("stroke",color);
+  arc.style.strokeDashoffset=ARC;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{arc.style.strokeDashoffset=ARC*(1-score/100);}));
+  $("finalScore").textContent=score+"%";
+  $("scoreRingWrap").setAttribute("aria-label","Fortress score "+score+"% protected");
+
+  let title,copy;
+  if(score>=75){title="Strong fortress foundation";copy="You appear to have several important protections in place. The next step is confirming they work together and remain current.";}
+  else if(score>=50){title="Fortress needs reinforcement";copy="You have useful foundations, but important gaps may weaken the overall strategy. A coordinated review is recommended.";}
+  else{title="Major breaches detected";copy="Several areas appear exposed or uncertain. Early professional review may identify practical ways to strengthen the family position.";}
+  $("statusTitle").textContent=title;$("statusTitle").style.color=color;$("statusCopy").textContent=copy;
+
+  const client=$("clientName").value.trim(),family=$("familyName").value.trim(),pc=$("postcode").value.trim();
+  const who=family||client||"Your";
+  $("reportTitle").textContent=/\bfamily$/i.test(who)?who+" Wealth Protection Report":who+" Family Wealth Protection Report";
+  const prof=profiles.find(p=>p.id===selectedProfile);
+  const meta=[];
+  if(client)meta.push("Prepared for "+client);
+  if(pc)meta.push("Postcode "+pc);
+  if(prof)meta.push("Profile: "+prof.title);
+  meta.push(new Date().toLocaleDateString("en-AU",{day:"numeric",month:"long",year:"numeric"}));
+  $("reportMeta").textContent=meta.join(" · ");
+
+  const grid=$("categoryGrid");grid.innerHTML="";
+  Object.entries(categoryMeta).forEach(([cat,m])=>{
+    const v=categoryScore(cat),c=band(v),d=document.createElement("div");
+    d.className="category-box";
+    d.innerHTML=`<div class="top"><b><span aria-hidden="true">${m.icon}</span> ${m.label}</b><span style="color:${c};font-weight:900">${v}%</span></div><div class="cat-track"><div class="cat-fill" style="width:${v}%;background:${c}"></div></div>`;
+    grid.appendChild(d);
+  });
+
+  const strengths=[],risks=[],actions=[],priorities=[];
+  questions.forEach(q=>{
+    const v=answers[q.key]?.v??0;
+    if(v===2)strengths.push("✓ "+q.strength);
+    else{risks.push("⚠ "+q.risk);actions.push(q.action);priorities.push({score:v,title:q.priority,copy:q.action});}
+  });
+  fillList("strengthList",strengths.length?strengths:["No strong protections were clearly identified from the answers provided."]);
+  fillList("riskList",risks.length?risks:["No major gaps were identified from the answers provided."]);
+  fillList("actionList",actions.length?actions:["Maintain a regular integrated review cycle and update structures as circumstances or law change."]);
+
+  priorities.sort((a,b)=>a.score-b.score);
+  const pg=$("priorityGrid");pg.innerHTML="";
+  const top=priorities.slice(0,3);
+  (top.length?top:[{title:"Maintain the fortress",copy:"Continue coordinated reviews of tax, estate, super and control structures."}]).forEach((p,i)=>{
+    const d=document.createElement("div");d.className="priority";
+    const n=document.createElement("div");n.className="num";n.textContent=i+1;
+    const b=document.createElement("b");b.textContent=p.title;
+    const s=document.createElement("span");s.textContent=p.copy;
+    d.append(n,b,s);pg.appendChild(d);
+  });
+  show("results",$("reportTitle"));
+}
+
+function restart(){
+  selectedProfile=null;questions=[];current=0;answers={};
+  ["clientName","familyName","postcode"].forEach(id=>$(id).value="");
+  store.clear();
+  $("resumeBtn").hidden=true;
+  show("hero",$("startBtn"));
+}
+
+/* ---- Wire up ---- */
+$("startBtn").addEventListener("click",openSetup);
+$("setupBack").addEventListener("click",()=>show("hero",$("startBtn")));
+$("setupForm").addEventListener("submit",beginAssessment);
+$("backBtn").addEventListener("click",goBack);
+$("nextBtn").addEventListener("click",goNext);
+$("printBtn").addEventListener("click",()=>window.print());
+$("restartBtn").addEventListener("click",restart);
+["clientName","familyName","postcode"].forEach(id=>$(id).addEventListener("input",()=>store.save()));
+$("postcode").addEventListener("input",e=>{e.target.value=e.target.value.replace(/\D/g,"").slice(0,4)});
+
+document.addEventListener("keydown",e=>{
+  if(screen!=="game"||e.altKey||e.ctrlKey||e.metaKey)return;
+  const tag=(e.target.tagName||"").toLowerCase();if(tag==="input")return;
+  const n=parseInt(e.key,10);
+  const q=questions[current];
+  if(n>=1&&n<=q.options.length){e.preventDefault();selectOption(n-1);}
+  else if(e.key==="Enter"&&!(e.target.closest&&e.target.closest("button"))){if(answers[q.key]){e.preventDefault();goNext();}}
+});
+
+/* ---- Restore saved session ---- */
+initCountdown();
+const saved=store.load();
+if(saved&&saved.selectedProfile&&profileQuestions[saved.selectedProfile]){
+  selectedProfile=saved.selectedProfile;answers=saved.answers||{};current=saved.current||0;
+  $("clientName").value=saved.clientName||"";$("familyName").value=saved.familyName||"";$("postcode").value=saved.postcode||"";
+  if(saved.screen==="game"||saved.screen==="results"){
+    buildQuestions();current=Math.min(current,questions.length-1);
+    $("resumeBtn").hidden=false;
+    $("resumeBtn").addEventListener("click",()=>{
+      buildCategoryBars();
+      if(saved.screen==="results"&&questions.every(q=>answers[q.key]))finish();
+      else{renderQuestion();show("game",$("questionText"));}
+    });
+  }
+}
+})();
+</script>
+</body>
+</html>
